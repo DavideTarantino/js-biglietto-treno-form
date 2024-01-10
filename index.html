@@ -21,29 +21,47 @@
 
         <div class="d-flex col-6 text-center gap-5 ">
             <div>
-                <label for="nome" class="fs-5">Inserisci qui il nome</label>
-                <input class="form-control" type="text" name="nome" id="nome" placeholder="inserisci qui il tuo nome" required>
+                <label for="nome" class="fs-5">Digita il tuo nome</label>
+                <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome e Cognome" required>
             </div>
             <div>
                 <label for="chilometri" class="fs-5">Km da percorrere:</label>
                 <input class="form-control" type="number" name="chilometri" id="chilometri" placeholder="0" min="1" required>
             </div>
             <div>
-                <label for="eta" class="fs-5">Fascia d'età:</label>
-
-                <select class="form-control" aria-label="Default select example" id="eta">
-                    <option value="default" selected disabled>Età</option>
-                    <option value="maggiorenne">Maggiorenne</option>
-                    <option value="minorenne">Minorenne</option>
-                    <option value="over-65">Over 65</option>
-                </select>
+                <label for="eta" class="fs-5">Digita la tua età:</label>
+                <input type="number" class="form-control"  id="eta" min="1" max="110" placeholder="0" required>
             </div>
         </div>
         <div class="d-flex flex-row gap-5 mt-3">
-            <button id="genera" class="btn bg-primary text-light">Genera</button>
-            <button id="annulla" class="btn bg-danger text-light">Annulla</button>
-        </div>
+            <button onclick="genera()" class="btn bg-primary text-light">Genera</button>
+            <button onclick="annulla()" class="btn bg-danger text-light">Annulla</button>
         </div>
     </main>
+    <footer class="mt-5 d-flex flex-column align-items-center bg-light rounded-5" style="height: 25vh; width: 70vw; margin: 0 auto;">
+        <div class="justify-content-center d-flex gap-5 mt-4">
+            <div>
+                <h4>NOME PASSEGGERO</h4>
+                <p class="mt-4" id="outputnome"></p>
+            </div>
+            <div>
+                <h4>Offerta</h4>
+                <p class="mt-4" id="output-offerta"></p>
+            </div>
+            <div>
+                <h4>Carrozza</h4>
+                <p class="mt-4" id="output-carrozza"></p>
+            </div>  
+            <div>
+                <h4>Codice CP</h4>
+                <p class="mt-4" id="output-cp"></p>
+            </div>
+            <div>
+                <h4>Prezzo del biglietto</h4>
+                <p class="mt-4" id="output-prezzo"></p>
+            </div>           
+        </div>
+    </footer>
+    <script src="./home.js"></script>
 </body>
 </html>
